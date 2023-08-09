@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Battle of the Bits Votelog Stats</title>
-        <script src="stats.js"></script>
-        <script src="statsmath.js"></script>
+        <script src="js/jquery-3.7.0.js"></script>
+        <script src="tablesorter/jquery.tablesorter.js"></script>
+        <script src="js/stats.js"></script>
+        <script src="js/statsmath.js"></script>
+        <script src="js/svggraph.js"></script>
+        <link rel="stylesheet" href="tablesorter/theme.default.min.css" type="text/css">
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
@@ -16,7 +20,7 @@
             <input type="button" value="use default" onclick="parseAndGraph(defaultlog)">
         </div>
         <br>
-        <table id="entrytable"></table>
+        <table id="entrytable" class="tablesorter tablesorter-default"></table>
         <footer>
             <p><sub>note: scores may vary from website as this calulator doesn't factor in voter influence!</sub></p>
         </footer>

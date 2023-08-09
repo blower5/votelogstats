@@ -151,19 +151,24 @@ var defaultlog =
 
 ,| tally compiled 2023-06-03 12:33:10`;
 
-// function go() {
-//     parseData();
-// }
+class Entry {
+    constructor(name,votesarray) {
+        this.name = name;
+        this.votesarray = votesarray;
+        this.mean = smathmean(votesarray);
+        this.stdevp = smathstdevp(votesarray);
+    }
+}
+
 function parseAndGraph(votelog) {
     clearRows();
 
-    var entriesarrayunclean, entriesarrayclean;
-    [entriesarrayunclean, entriesarrayclean] = parseData(votelog);
-
-    addHeaderRow();
-    for (let i in entriesarrayclean) {
-        addStatRow(entriesarrayunclean[i],entriesarrayclean[i]);
+    var entriesarray = parseData(votelog);
+    createTable();
+    for (let i of entriesarray) {
+        addStatRow(i);
     }
+    $("#entrytable").tablesorter();
 }
 
 function parseData(votelog) {
@@ -180,17 +185,24 @@ function parseData(votelog) {
     
     //isolate the votes TODO: voter influence is discarded
     var entriesarraynumbersonly = structuredClone(entriesarray);
+    var structuredentryarray = [];
+
     for (let i in entriesarraynumbersonly) {
         //remove top entry, which is not a vote
         entriesarraynumbersonly[i].splice(0,1);
         for (let j in entriesarraynumbersonly[i]) {
-            entriesarraynumbersonly[i][j] = entriesarraynumbersonly[i][j].slice(0,5);
+            //isolate first few characters (the vote) and convert
+            entriesarraynumbersonly[i][j] = parseFloat(entriesarraynumbersonly[i][j].slice(0,5));
         }
+        structuredentryarray.push(new Entry(entriesarray[i][0],entriesarraynumbersonly[i]));
     }
-    return [entriesarray,entriesarraynumbersonly];
+    return structuredentryarray;
 }
 
-function addHeaderRow() {
+function createTable() {
+    var thead = document.createElement('thead');
+    var tbody = document.createElement('tbody');
+    tbody.id = "maintablebody";
     var tr = document.createElement('tr');
     
     function createth(content,className) {
@@ -198,16 +210,16 @@ function addHeaderRow() {
         th.textContent = content;
         return th;
     }
+
     tr.appendChild(createth("Entry"));
     tr.appendChild(createth("x̄"));
     tr.appendChild(createth("σ"));
-    document.getElementById('entrytable').appendChild(tr);
+    thead.appendChild(tr);
+    document.getElementById('entrytable').appendChild(thead);
+    document.getElementById('entrytable').appendChild(tbody);
 }
 
-function addStatRow(arrayunclean,arrayclean) {
-    //calculate stats
-    var mean   =   smathmean(arrayclean).toFixed(3);
-    var stdevp = smathstdevp(arrayclean).toFixed(3);
+function addStatRow(entry) {
     //manage graphics
 
     //add elements
@@ -220,11 +232,11 @@ function addStatRow(arrayunclean,arrayclean) {
 
     var tr = document.createElement('tr');
     
-    tr.appendChild( createtd(arrayunclean[0], "tdname"  ) );
-    tr.appendChild( createtd(mean           , "tdmean"  ) );
-    tr.appendChild( createtd(stdevp         , "tdstdevp") );
+    tr.appendChild( createtd(  entry.name,           "tdname"  ) );
+    tr.appendChild( createtd(  entry.mean.toFixed(3),"tdmean"  ) );
+    tr.appendChild( createtd(entry.stdevp.toFixed(3),"tdstdevp") );
 
-    document.getElementById('entrytable').appendChild(tr);
+    document.getElementById('maintablebody').appendChild(tr);
 }
 
 function clearRows() {
