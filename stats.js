@@ -1,157 +1,155 @@
 "use strict";
 
 var defaultlog = 
-`
-·°o_O Votes by Entry 0_o°·
+`·°o_O Votes by Entry 0_o°·
 
-==| blower5 - look, look at the sky.mp3
-5.000 - Jakerson x3.86 INF
-4.000 - Dunehawk x2.76 INF
-6.000 - zipdisq x4.08 INF
-3.000 - BubblegumOctopus x2.65 INF
-6.000 - damifortune x3.09 INF
-5.000 - Opilion x2.76 INF
-7.000 - Frag x3.09 INF
-7.000 - roz x3.75 INF
-6.000 - cabbage drop x4.19 INF
-6.000 - Philly Deck x2.54 INF
-6.000 - B-Doh x2.1 INF
+==| sean - feline facility.mp3
+5.000 - sulkaritari x3.42 INF
+6.000 - Viraxor x3.2 INF
+4.000 - Beej x2.1 INF
+6.000 - Frag x2.6 INF
+6.000 - cabbage drop x2.87 INF
+5.000 - TristEndo x3.09 INF
+7.000 - damifortune x2.98 INF
+5.000 - hanna x3.53 INF
+5.000 - kilowatt64 x2.43 INF
+4.000 - tree x3.86 INF
+2.000 - kleeder x3.2 INF
+2.000 - mirageofher x4.08 INF
 
-==| BubblegumOctopus - Delightful and Pleasant.mp3
-6.000 - Dunehawk x2.76 INF
-5.000 - zipdisq x4.08 INF
-6.000 - Jakerson x3.86 INF
-6.000 - damifortune x3.09 INF
-5.000 - blower5 x2.1 INF
-5.000 - Opilion x2.76 INF
-7.000 - Frag x3.09 INF
-5.000 - roz x3.75 INF
-7.000 - cabbage drop x4.19 INF
-6.000 - B-Doh x2.1 INF
-6.000 - Philly Deck x2.54 INF
+==| TristEndo - carnivalJam.mp3
+6.000 - sulkaritari x3.42 INF
+6.000 - Viraxor x3.2 INF
+5.000 - Beej x2.1 INF
+5.000 - Frag x2.6 INF
+5.000 - cabbage drop x2.87 INF
+5.000 - damifortune x2.98 INF
+4.000 - hanna x3.53 INF
+6.000 - kilowatt64 x2.43 INF
+3.000 - tree x3.86 INF
+3.000 - kleeder x3.2 INF
+3.000 - mirageofher x4.08 INF
 
-==| Dunehawk - Hidden Memories.mp3
-4.000 - zipdisq x4.08 INF
-4.000 - BubblegumOctopus x2.65 INF
-4.000 - Jakerson x3.86 INF
-4.000 - damifortune x3.09 INF
-3.000 - blower5 x2.1 INF
-5.000 - Opilion x2.76 INF
-5.000 - Frag x3.09 INF
-4.000 - roz x3.75 INF
-7.000 - cabbage drop x4.19 INF
-3.000 - B-Doh x2.1 INF
-4.000 - Philly Deck x2.54 INF
+==| kleeder - participated.mp3
+5.000 - sulkaritari x3.42 INF
+6.000 - Beej x2.1 INF
+6.000 - Frag x2.6 INF
+7.000 - Viraxor x3.2 INF
+6.000 - cabbage drop x2.87 INF
+5.000 - TristEndo x3.09 INF
+6.000 - damifortune x2.98 INF
+5.000 - hanna x3.53 INF
+5.000 - tree x3.86 INF
+7.000 - kilowatt64 x2.43 INF
+5.000 - mirageofher x4.08 INF
 
-==| Philly Deck - House Party.mp3
-6.000 - zipdisq x4.08 INF
-3.000 - BubblegumOctopus x2.65 INF
-5.000 - Jakerson x3.86 INF
-3.000 - Dunehawk x2.76 INF
-5.000 - damifortune x3.09 INF
-5.000 - blower5 x2.1 INF
-5.000 - Opilion x2.76 INF
-6.000 - Frag x3.09 INF
-4.000 - roz x3.75 INF
-6.000 - cabbage drop x4.19 INF
-7.000 - B-Doh x2.1 INF
+==| cabbage drop - midnight horse.mp3
+5.000 - sulkaritari x3.42 INF
+4.000 - Beej x2.1 INF
+5.000 - Frag x2.6 INF
+5.000 - Viraxor x3.2 INF
+4.000 - TristEndo x3.09 INF
+5.000 - damifortune x2.98 INF
+4.000 - hanna x3.53 INF
+3.000 - tree x3.86 INF
+2.000 - kleeder x3.2 INF
+5.000 - kilowatt64 x2.43 INF
+4.000 - mirageofher x4.08 INF
 
-==| Opilion - hooo.mp3
-3.000 - zipdisq x4.08 INF
-3.000 - Jakerson x3.86 INF
-2.000 - Dunehawk x2.76 INF
-5.000 - BubblegumOctopus x2.65 INF
-4.000 - damifortune x3.09 INF
-3.000 - blower5 x2.1 INF
-4.000 - Frag x3.09 INF
-3.000 - roz x3.75 INF
-4.000 - cabbage drop x4.19 INF
-1.000 - B-Doh x2.1 INF
-1.000 - Philly Deck x2.54 INF
+==| hanna - sippycup.mp3
+7.000 - sulkaritari x3.42 INF
+7.000 - Beej x2.1 INF
+6.000 - Frag x2.6 INF
+5.000 - Viraxor x3.2 INF
+7.000 - cabbage drop x2.87 INF
+5.000 - TristEndo x3.09 INF
+5.000 - damifortune x2.98 INF
+4.000 - tree x3.86 INF
+4.000 - kleeder x3.2 INF
+7.000 - kilowatt64 x2.43 INF
+4.000 - mirageofher x4.08 INF
 
-==| sean - foreboding portal.mp3
-4.000 - zipdisq x4.08 INF
-5.000 - Jakerson x3.86 INF
-4.000 - Dunehawk x2.76 INF
-6.000 - BubblegumOctopus x2.65 INF
-6.000 - damifortune x3.09 INF
-6.000 - blower5 x2.1 INF
-6.000 - Opilion x2.76 INF
-6.000 - Frag x3.09 INF
-6.000 - roz x3.75 INF
-6.000 - cabbage drop x4.19 INF
-2.000 - B-Doh x2.1 INF
-2.000 - Philly Deck x2.54 INF
+==| sulkaritari - studious toad.mp3
+6.000 - Frag x2.6 INF
+7.000 - Beej x2.1 INF
+5.000 - Viraxor x3.2 INF
+6.000 - cabbage drop x2.87 INF
+6.000 - TristEndo x3.09 INF
+7.000 - damifortune x2.98 INF
+6.000 - hanna x3.53 INF
+5.000 - tree x3.86 INF
+6.000 - kleeder x3.2 INF
+7.000 - kilowatt64 x2.43 INF
+6.000 - mirageofher x4.08 INF
 
-==| Jakerson - wooow.mp3
-7.000 - zipdisq x4.08 INF
-5.000 - Dunehawk x2.76 INF
-7.000 - BubblegumOctopus x2.65 INF
-5.000 - damifortune x3.09 INF
-6.000 - blower5 x2.1 INF
-7.000 - Opilion x2.76 INF
-6.000 - Frag x3.09 INF
-5.000 - roz x3.75 INF
-6.000 - cabbage drop x4.19 INF
-6.000 - B-Doh x2.1 INF
-7.000 - Philly Deck x2.54 INF
+==| tree - ew no.mp3
+6.000 - sulkaritari x3.42 INF
+7.000 - Frag x2.6 INF
+6.000 - Beej x2.1 INF
+4.000 - Viraxor x3.2 INF
+5.000 - cabbage drop x2.87 INF
+6.000 - TristEndo x3.09 INF
+6.000 - damifortune x2.98 INF
+5.000 - hanna x3.53 INF
+3.000 - kleeder x3.2 INF
+4.000 - kilowatt64 x2.43 INF
+5.000 - mirageofher x4.08 INF
 
-==| B-Doh - HAUNTED MANSION.mp3
-6.000 - zipdisq x4.08 INF
-6.000 - Jakerson x3.86 INF
-4.000 - Dunehawk x2.76 INF
-6.000 - BubblegumOctopus x2.65 INF
-5.000 - damifortune x3.09 INF
-4.000 - blower5 x2.1 INF
-6.000 - Frag x3.09 INF
-6.000 - roz x3.75 INF
-5.000 - cabbage drop x4.19 INF
-5.000 - Philly Deck x2.54 INF
-6.000 - Opilion x2.76 INF
+==| Beej - freefall.mp3
+7.000 - sulkaritari x3.42 INF
+6.000 - Frag x2.6 INF
+7.000 - Viraxor x3.2 INF
+6.000 - cabbage drop x2.87 INF
+5.000 - TristEndo x3.09 INF
+5.000 - damifortune x2.98 INF
+7.000 - hanna x3.53 INF
+4.000 - tree x3.86 INF
+4.000 - kleeder x3.2 INF
+5.000 - kilowatt64 x2.43 INF
+5.000 - mirageofher x4.08 INF
 
-==| zipdisq - tiny.mp3
-4.000 - BubblegumOctopus x2.65 INF
-4.000 - Dunehawk x2.76 INF
-4.000 - Jakerson x3.86 INF
-6.000 - damifortune x3.09 INF
-4.000 - blower5 x2.1 INF
-6.000 - Frag x3.09 INF
-6.000 - roz x3.75 INF
-5.000 - cabbage drop x4.19 INF
-3.000 - B-Doh x2.1 INF
-3.000 - Philly Deck x2.54 INF
-4.000 - Opilion x2.76 INF
+==| damifortune - you cant just put distortion on every channel includign th e.mp3
+6.000 - sulkaritari x3.42 INF
+6.000 - Frag x2.6 INF
+7.000 - Beej x2.1 INF
+6.000 - cabbage drop x2.87 INF
+6.000 - TristEndo x3.09 INF
+6.000 - Viraxor x3.2 INF
+6.000 - hanna x3.53 INF
+7.000 - tree x3.86 INF
+5.000 - kleeder x3.2 INF
+6.000 - kilowatt64 x2.43 INF
+7.000 - mirageofher x4.08 INF
 
-==| cabbage drop - meow machine.mp3
-5.000 - zipdisq x4.08 INF
-3.000 - BubblegumOctopus x2.65 INF
-3.000 - Dunehawk x2.76 INF
-5.000 - Jakerson x3.86 INF
-5.000 - damifortune x3.09 INF
-5.000 - blower5 x2.1 INF
-5.000 - Frag x3.09 INF
-5.000 - roz x3.75 INF
-3.000 - B-Doh x2.1 INF
-4.000 - Philly Deck x2.54 INF
-4.000 - Opilion x2.76 INF
+==| kilowatt64 - alight.mp3
+6.000 - sulkaritari x3.42 INF
+6.000 - Frag x2.6 INF
+5.000 - cabbage drop x2.87 INF
+6.000 - TristEndo x3.09 INF
+7.000 - Viraxor x3.2 INF
+6.000 - damifortune x2.98 INF
+6.000 - hanna x3.53 INF
+6.000 - Beej x2.1 INF
+5.000 - tree x3.86 INF
+6.000 - kleeder x3.2 INF
+7.000 - mirageofher x4.08 INF
 
-==| Frag - dwarven village.mp3
-7.000 - zipdisq x4.08 INF
-6.000 - BubblegumOctopus x2.65 INF
-5.000 - Dunehawk x2.76 INF
-7.000 - Jakerson x3.86 INF
-7.000 - damifortune x3.09 INF
-5.000 - blower5 x2.1 INF
-7.000 - roz x3.75 INF
-7.000 - cabbage drop x4.19 INF
-4.000 - Philly Deck x2.54 INF
-4.000 - Opilion x2.76 INF
-6.000 - B-Doh x2.1 INF
+==| mirageofher - waterfall book.mp3
+6.000 - sulkaritari x3.42 INF
+6.000 - cabbage drop x2.87 INF
+7.000 - TristEndo x3.09 INF
+6.000 - Viraxor x3.2 INF
+5.000 - damifortune x2.98 INF
+5.000 - Beej x2.1 INF
+6.000 - hanna x3.53 INF
+5.000 - tree x3.86 INF
+6.000 - kleeder x3.2 INF
+7.000 - kilowatt64 x2.43 INF
 
 
 
 
-,| tally compiled 2023-08-05 14:25:25 `;
+,| tally compiled 2023-06-03 12:33:10`;
 
 // function go() {
 //     parseData();
