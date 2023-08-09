@@ -1,0 +1,43 @@
+html {
+  background-color: #eee;
+}
+body {
+  background-color: #fff;
+  margin: auto;
+  padding: 1em;
+  width: 100%;
+  max-width: 40em;
+  font-family: sans-serif;
+}
+
+ textarea {
+  float: left;
+  height: 16px;
+  padding: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin: 0px;
+  margin-right: 4px;
+  resize: none;
+}
+
+table {
+  width: 100%;
+}
+tr:nth-child(2n) {
+  background-color: #E7E9EB;
+}
+td, th {
+  padding-left: 3px;
+  font-family: monospace;
+  font-size: 11pt;
+}
+th {
+  font-size: 13pt;
+}
+.tdname {
+  width: 70%
+}
+.tdmean , .tdstdevp {
+  width: 15%;
+}

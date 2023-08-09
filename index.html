@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Battle of the Bits Votelog Stats</title>
+        <script src="stats.js"></script>
+        <script src="statsmath.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1>Votelog Stats</h1>
+        <div id="controlsupper">
+            <textarea id="votelog" name="votelog" placeholder="paste votelog..."></textarea>
+            <input type="button" value="go" onclick="parseAndGraph(document.getElementById('votelog').value)">
+            <input type="button" value="use default" onclick="parseAndGraph(defaultlog)">
+        </div>
+        <br>
+        <table id="entrytable"></table>
+        <footer>
+            <p><sub>note: scores may vary from website as this calulator doesn't factor in voter influence!</sub></p>
+        </footer>
+    </body>
+</html>
