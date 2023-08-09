@@ -161,10 +161,9 @@ class Entry {
 }
 
 function parseAndGraph(votelog) {
-    clearRows();
-
-    var entriesarray = parseData(votelog);
+    deleteTable();
     createTable();
+    var entriesarray = parseData(votelog);
     for (let i of entriesarray) {
         addStatRow(i);
     }
@@ -200,6 +199,9 @@ function parseData(votelog) {
 }
 
 function createTable() {
+    var table = document.createElement('table');
+    table.id = "entrytable";
+    table.className = "tablesorter tablesorter-default";
     var thead = document.createElement('thead');
     var tbody = document.createElement('tbody');
     tbody.id = "maintablebody";
@@ -215,8 +217,9 @@ function createTable() {
     tr.appendChild(createth("x̄"));
     tr.appendChild(createth("σ"));
     thead.appendChild(tr);
-    document.getElementById('entrytable').appendChild(thead);
-    document.getElementById('entrytable').appendChild(tbody);
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    document.getElementById('tablediv').appendChild(table);
 }
 
 function addStatRow(entry) {
@@ -239,6 +242,6 @@ function addStatRow(entry) {
     document.getElementById('maintablebody').appendChild(tr);
 }
 
-function clearRows() {
-    document.getElementById('entrytable').innerHTML = "";
+function deleteTable() {
+    document.getElementById('tablediv').innerHTML = "";
 }
